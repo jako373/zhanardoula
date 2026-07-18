@@ -12,6 +12,7 @@ test("ships the complete Kazakh doula experience", async () => {
   assert.match(page, /77013684924/);
   assert.match(page, /Доула медициналық маманды алмастырмайды/);
   assert.match(page, /hero-zhanar\.jpg/);
+  assert.match(page, /images\.pexels\.com/);
   assert.match(page, /doula-support\.webp/);
   assert.doesNotMatch(page, /api\/content|overrides/);
   assert.match(css, /@media\(max-width:620px\)/);
