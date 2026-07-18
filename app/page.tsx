@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import Image from "next/image";
 
 const phone = "77013684924";
 const wa = (message: string) => `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
@@ -58,7 +57,7 @@ export default function Home() {
         <a href="#top" className="brand"><span>Ж</span><b>Жанар</b><small>Доула · Атырау</small></a>
         <button className="menuBtn" aria-label="Мәзірді ашу" aria-expanded={menu} onClick={() => setMenu(!menu)}><i/><i/></button>
         <nav className={menu ? "open" : ""} aria-label="Негізгі мәзір">
-          {[['Басты бет','#top'],['Қызметтер','#services'],['Мен туралы','#about'],['Қалай өтеді?','#process'],['Сұрақтар','#faq']].map(([t,h]) => <a key={h} href={h} onClick={()=>setMenu(false)}>{t}</a>)}
+          {[['Басты бет','#top'],['Қызметтер','#services'],['Қалай өтеді?','#process'],['Сұрақтар','#faq']].map(([t,h]) => <a key={h} href={h} onClick={()=>setMenu(false)}>{t}</a>)}
           <a className="navCta" href={wa(mainMessage)}>Байланысу</a>
         </nav>
       </header>
@@ -72,7 +71,8 @@ export default function Home() {
           <p className="micro">Жауапты өзім беремін · Әңгіме құпия сақталады</p>
         </div>
         <div className="heroVisual">
-          <Image src="/hero-zhanar.jpg" alt="Доула Жанар жұмыс орнында" width={930} height={1280} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/hero-zhanar.jpg?v=4" alt="Доула Жанар жұмыс орнында" width="930" height="1280" fetchPriority="high" />
           <div className="note"><span>✦</span><p>Сіздің таңдауыңыз —<br/><b>әрдайым басты орында</b></p></div>
         </div>
       </section>
@@ -90,19 +90,20 @@ export default function Home() {
         <div className="photoGrid">
           <figure className="photoWide">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="https://images.pexels.com/photos/7155538/pexels-photo-7155538.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Болашақ ана тыныс алу жаттығуын жасап отыр" loading="lazy" />
-            <figcaption><b>Тыныс пен босаңсу</b><span>Денеңізді тыңдап, сабырды бірге табамыз</span></figcaption>
+            <img src="https://images.pexels.com/photos/7055740/pexels-photo-7055740.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Доула болашақ анаға жаттығу кезінде қолдау көрсетіп отыр" loading="lazy" />
+            <figcaption><b>Жеке дайындық</b><span>Сізге ыңғайлы қарқынмен бірге дайындаламыз</span></figcaption>
           </figure>
-          <figure className="photoPortrait">
-            <Image src="/hero-zhanar.jpg" alt="Доула Жанар" width={930} height={1280} unoptimized sizes="(max-width: 760px) 100vw, 35vw" />
-            <figcaption><b>Жеке көзқарас</b><span>Әр кездесу сіздің қажеттілігіңізге сай өтеді</span></figcaption>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://images.pexels.com/photos/7155538/pexels-photo-7155538.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Болашақ ана тыныс алу жаттығуын жасап отыр" loading="lazy" />
+            <figcaption><b>Тыныс пен босаңсу</b><span>Сабыр мен еркіндікті дене арқылы сезінеміз</span></figcaption>
+          </figure>
+          <figure>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://images.pexels.com/photos/7055676/pexels-photo-7055676.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Болашақ ана жайлы ортада дайындалып отыр" loading="lazy" />
+            <figcaption><b>Жұмсақ сүйемелдеу</b><span>Әр кезеңде өзіңізді қауіпсіз сезінуіңіз маңызды</span></figcaption>
           </figure>
         </div>
-      </section>
-
-      <section className="about" id="about">
-        <div className="aboutVisual"><Image src="/doula-support.webp" alt="Доула мен болашақ ана жылы әңгімелесіп отыр" width={1024} height={1024} sizes="(max-width: 900px) 100vw, 50vw"/><p>«Әйел өзін тыңдағанда,<br/>өз күшін қайта табады»</p></div>
-        <div className="aboutCopy"><p className="eyebrow">Мен туралы</p><h2>Сіздің жаныңызда —<br/><em>асықпай, бағаламай</em></h2><blockquote>«Әр әйел босану кезінде өзін қауіпсіз, естілген және қолдау көргендей сезінуге лайық.»</blockquote><p>Менің мақсатым — сіздің шешімдеріңізді құрметтеп, маңызды кезеңде жаныңыздан табылу. Доула ретінде кеңістігіңізді сақтап, сұрақтарыңызды реттеуге және ішкі сеніміңізге сүйенуге көмектесемін.</p><div className="credentials"><div><small>БІЛІМІ</small><b>Ақпарат кейін енгізіледі</b></div><div><small>СЕРТИФИКАТЫ</small><b>Ақпарат кейін енгізіледі</b></div><div><small>ТӘЖІРИБЕСІ</small><b>Ақпарат кейін енгізіледі</b></div></div></div>
       </section>
 
       <section className="section process" id="process"><div className="centerHead"><p className="eyebrow">Бірге жұмыс істеу</p><h2>Сүйемелдеу қалай өтеді?</h2><p>Түсінікті төрт қадам. Әр кезеңде сіздің жайлылығыңыз бен таңдауыңыз маңызды.</p></div><div className="steps">{[['01','WhatsApp арқылы танысу','Қысқа хабарлама жазып, алғашқы сұрағыңызды қоясыз.'],['02','Алғашқы кеңес','Қажеттіліктеріңізді, күткеніңізді және қолдау форматын талқылаймыз.'],['03','Жеке дайындық жоспары','Сізге және отбасыңызға сай нақты әрі икемді жоспар құрамыз.'],['04','Келісілген сүйемелдеу','Таңдалған форматта сабырлы, тұрақты қолдау көрсетемін.']].map((x,i)=><article key={x[0]}><span>{x[0]}</span>{i<3&&<i/>}<h3>{x[1]}</h3><p>{x[2]}</p></article>)}</div></section>
