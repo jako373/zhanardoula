@@ -72,7 +72,7 @@ export default function Home() {
           <p className="micro">Жауапты өзім беремін · Әңгіме құпия сақталады</p>
         </div>
         <div className="heroVisual">
-          <Image src="/hero-zhanar.jpg" alt="Доула Жанар жұмыс орнында" width={930} height={1280} priority sizes="(max-width: 900px) 100vw, 50vw" />
+          <Image src="/hero-zhanar.jpg" alt="Доула Жанар жұмыс орнында" width={930} height={1280} priority unoptimized sizes="(max-width: 900px) 100vw, 50vw" />
           <div className="note"><span>✦</span><p>Сіздің таңдауыңыз —<br/><b>әрдайым басты орында</b></p></div>
         </div>
       </section>
@@ -80,6 +80,24 @@ export default function Home() {
       <section className="section services" id="services">
         <div className="sectionHead"><div><p className="eyebrow">Қолдау бағыттары</p><h2>Сізге қалай<br/><em>көмектесемін?</em></h2></div><p>Әр жүктілік пен әр отбасының тарихы бөлек. Сондықтан қолдау форматы да сіздің жағдайыңызға сай құрылады.</p></div>
         <div className="serviceGrid">{services.map(([n,t,d])=><article key={n}><span>{n}</span><h3>{t}</h3><p>{d}</p><a href={wa(`Сәлеметсіз бе, Жанар! «${t}» қызметі туралы толығырақ білгім келеді.`)}>Толығырақ білу <b>→</b></a></article>)}</div>
+      </section>
+
+      <section className="photoStory" aria-labelledby="photo-story-title">
+        <div className="photoIntro">
+          <p className="eyebrow">Жылы әрі сенімді қолдау</p>
+          <h2 id="photo-story-title">Дайындықтың әр сәтінде<br/><em>жаныңыздамын</em></h2>
+        </div>
+        <div className="photoGrid">
+          <figure className="photoWide">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="https://images.pexels.com/photos/7155538/pexels-photo-7155538.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Болашақ ана тыныс алу жаттығуын жасап отыр" loading="lazy" />
+            <figcaption><b>Тыныс пен босаңсу</b><span>Денеңізді тыңдап, сабырды бірге табамыз</span></figcaption>
+          </figure>
+          <figure className="photoPortrait">
+            <Image src="/hero-zhanar.jpg" alt="Доула Жанар" width={930} height={1280} unoptimized sizes="(max-width: 760px) 100vw, 35vw" />
+            <figcaption><b>Жеке көзқарас</b><span>Әр кездесу сіздің қажеттілігіңізге сай өтеді</span></figcaption>
+          </figure>
+        </div>
       </section>
 
       <section className="about" id="about">
