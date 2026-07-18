@@ -72,7 +72,7 @@ export default function Home() {
         </div>
         <div className="heroVisual">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/hero-zhanar.jpg?v=5" alt="Доула Жанар жұмыс орнында" width="930" height="1280" fetchPriority="high" />
+          <img src="/hero-zhanar-enhanced.jpg?v=1" alt="Доула Жанар жұмыс орнында" width="1069" height="1471" fetchPriority="high" />
           <div className="note"><span>✦</span><p>Сіздің таңдауыңыз —<br/><b>әрдайым басты орында</b></p></div>
         </div>
       </section>
