@@ -11,7 +11,7 @@ test("ships the complete Kazakh doula experience", async () => {
   assert.match(page, /Босануға сеніммен және тыныштықпен дайындалыңыз/);
   assert.match(page, /77013684924/);
   assert.match(page, /Доула медициналық маманды алмастырмайды/);
-  assert.match(page, /hero-zhanar\.jpg/);
+  assert.match(page, /hero-zhanar-enhanced\.jpg/);
   assert.match(page, /images\.pexels\.com/);
   assert.doesNotMatch(page, /Сіздің жаныңызда|БІЛІМІ|Жеке көзқарас/);
   assert.doesNotMatch(page, /api\/content|overrides/);
