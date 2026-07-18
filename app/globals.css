@@ -14,12 +14,25 @@ body{background:linear-gradient(180deg,#fff4f7 0%,#ffeaf0 45%,#fff8fa 100%)}
 .heroVisual{background:#ef8da9;min-height:700px}
 .heroVisual:before{background:#ffb6c8;border:0;opacity:.55}
 .heroVisual:after{border-color:#fff8}
-.heroVisual>img{position:absolute;inset:28px 28px 0;width:calc(100% - 56px);height:calc(100% - 28px);object-fit:cover;object-position:center 42%;z-index:2;border-radius:220px 220px 0 0;box-shadow:0 30px 80px #802a4850}
+.heroVisual>img{position:absolute;inset:22px 22px 0;width:calc(100% - 44px);height:calc(100% - 22px);object-fit:contain;object-position:center bottom;z-index:2;border-radius:220px 220px 18px 18px;filter:none;image-rendering:auto;box-shadow:0 30px 80px #802a4850}
 .note{left:auto;right:22px;bottom:40px;background:#fff8fbf2;border:1px solid #fff}
 .services{background:#fff8fb}
 .serviceGrid{gap:14px}
 .serviceGrid article{margin:0;border:1px solid #f5c7d5;border-radius:24px;background:#fff;box-shadow:0 15px 42px #9a34520d;min-height:280px}
 .serviceGrid article:hover{box-shadow:0 24px 58px #9a345228;border-color:#e88ca7}
+.photoStory{padding:105px max(5vw,22px);background:#ffe8ef}
+.photoIntro{max-width:1240px;margin:0 auto 48px;display:flex;justify-content:space-between;gap:40px;align-items:end}
+.photoIntro .eyebrow{margin-bottom:8px}
+.photoIntro h2{text-align:right}
+.photoGrid{max-width:1240px;margin:auto;display:grid;grid-template-columns:minmax(0,1.7fr) minmax(280px,.8fr);gap:22px}
+.photoGrid figure{margin:0;position:relative;overflow:hidden;border-radius:28px;background:#d76587;min-height:540px;box-shadow:0 22px 60px #8629471c}
+.photoGrid img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:none}
+.photoWide img{object-position:center}
+.photoPortrait img{object-position:center 38%}
+.photoGrid figure:after{content:"";position:absolute;inset:45% 0 0;background:linear-gradient(transparent,#51152fbb)}
+.photoGrid figcaption{position:absolute;z-index:2;left:28px;right:28px;bottom:26px;color:#fff;display:flex;flex-direction:column}
+.photoGrid figcaption b{font:25px Prata,serif;font-weight:400}
+.photoGrid figcaption span{font-size:12px;color:#ffeaf1;margin-top:4px}
 .about{background:#f7bfd0;grid-template-columns:54% 46%;padding:34px}
 .aboutVisual{min-height:660px;border-radius:32px;overflow:hidden;background:#d76687}
 .aboutVisual>img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
@@ -39,5 +52,5 @@ body{background:linear-gradient(180deg,#fff4f7 0%,#ffeaf0 45%,#fff8fa 100%)}
 .contact form{border-radius:28px;box-shadow:0 30px 90px #3d0f2655}
 footer{background:#f7c7d5}
 .floatingWa{background:#8f274b;border-radius:999px}
-@media(max-width:980px){.header{background:#fff1f5f5}.about{grid-template-columns:1fr;padding:22px}.heroVisual>img{inset:20px 20px 0;width:calc(100% - 40px);height:calc(100% - 20px)}.faq{border-radius:0;margin:0}}
-@media(max-width:620px){.heroVisual{min-height:520px}.heroVisual>img{border-radius:150px 150px 0 0}.note{right:12px;bottom:18px}.aboutVisual{min-height:430px}.aboutCopy{border-radius:22px}.serviceGrid article{border-radius:18px}.packageGrid article{border-radius:18px}}
+@media(max-width:980px){.header{background:#fff1f5f5}.about{grid-template-columns:1fr;padding:22px}.heroVisual>img{inset:16px 16px 0;width:calc(100% - 32px);height:calc(100% - 16px)}.photoIntro{display:block}.photoIntro h2{text-align:left;margin-top:14px}.photoGrid{grid-template-columns:1.25fr .75fr}.photoGrid figure{min-height:480px}.faq{border-radius:0;margin:0}}
+@media(max-width:620px){.header{padding:0 18px}.brand{grid-template-columns:36px auto;column-gap:9px}.brand>span{width:36px;height:36px}.brand b{font-size:18px}.brand small{letter-spacing:1.3px}.heroCopy{padding-left:22px;padding-right:22px}.heroVisual{min-height:560px}.heroVisual>img{inset:12px 12px 0;width:calc(100% - 24px);height:calc(100% - 12px);border-radius:120px 120px 14px 14px}.note{right:10px;left:10px;bottom:12px;padding:13px 16px}.photoStory{padding:80px 18px}.photoIntro{margin-bottom:30px}.photoGrid{grid-template-columns:1fr;gap:14px}.photoGrid figure{min-height:390px;border-radius:20px}.photoGrid .photoPortrait{min-height:500px}.photoGrid figcaption{left:20px;right:20px;bottom:20px}.photoGrid figcaption b{font-size:21px}.aboutVisual{min-height:430px}.aboutCopy{border-radius:22px}.serviceGrid article{border-radius:18px}.packageGrid article{border-radius:18px}.primary{width:100%;justify-content:center}.textLink{width:max-content;max-width:100%}.contact form{width:100%}}
